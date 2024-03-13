@@ -20,6 +20,7 @@ from blog.views import my_blog
 from menu.views import my_menu
 from signup.views import my_signup
 from diary.views import my_diary
+from booking.views import my_booking
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +28,5 @@ urlpatterns = [
     path('menu/', my_menu, name='menu'),
     path('signup/', my_signup, name='signup'),
     path('diary/', my_diary, name='diary'),
+    path('booking/', my_booking, name='booking'),
 ]
