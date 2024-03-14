@@ -28,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-kxr1hfb55p-wo^=%bz$_qzsq$7%hh-nt3mqmrcklhbs7kw$^++'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-grayadamsonw-hotroddine-k4t0cjbxk6b.ws-eu110.gitpod.io', '.herokuapp.com' ]
 
@@ -96,6 +96,10 @@ DATABASES = {
 
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
